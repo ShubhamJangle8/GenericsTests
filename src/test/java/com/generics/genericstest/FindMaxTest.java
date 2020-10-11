@@ -16,7 +16,7 @@ class FindMaxGenericsTest {
 		Integer sixth = 2;
 		assertEquals(fourth, new FindMax<Integer>(first, second, third, fourth, fifth, sixth).testMaximum());
 	}
-	
+
 	@Test
 	public void givenMultipeFloat_shouldReturn_maxFloat() {
 		Integer first = 9;
@@ -25,7 +25,7 @@ class FindMaxGenericsTest {
 		Integer fourth = 10;
 		assertEquals(second, new FindMax<Integer>(first, second, third, fourth).testMaximum());
 	}
-	
+
 	@Test
 	public void givenMultipleFloat_shouldReturn_MaxFloat() {
 		Float first = 9.5f;
@@ -36,7 +36,7 @@ class FindMaxGenericsTest {
 		Float sixth = 20.7f;
 		assertEquals(sixth, new FindMax<Float>(first, second, third, fourth, fifth, sixth).testMaximum());
 	}
-	
+
 	@Test
 	public void givenMultipeInt_shouldReturn_maxInt() {
 		Float first = 9.5f;
@@ -45,7 +45,6 @@ class FindMaxGenericsTest {
 		Float fourth = 10f;
 		assertEquals(fourth, new FindMax<Float>(first, second, third, fourth).testMaximum());
 	}
-	
 
 	@Test
 	public void givenMultipeString_shouldReturn_maxString() {
@@ -55,7 +54,7 @@ class FindMaxGenericsTest {
 		String fourth = "coconut";
 		assertEquals(first, new FindMax<String>(first, second, third, fourth).testMaximum());
 	}
-	
+
 	@Test
 	public void givenMultipeString_shouldReturn_maxstring() {
 		String first = "peach";
