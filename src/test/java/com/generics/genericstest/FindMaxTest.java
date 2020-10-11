@@ -4,77 +4,66 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class FindMaxTest {
+class FindMaxGenericsTest {
 
 	@Test
-	public void givenFirstMaxInt_shouldReturn_first() {
+	public void givenMultipleInt_shouldReturn_maxInteger() {
 		Integer first = 9;
 		Integer second = 5;
 		Integer third = 7;
-		assertEquals(first, new FindMax<Integer>(first, second, third).testMaximum());
+		Integer fourth = 10;
+		Integer fifth = 1;
+		Integer sixth = 2;
+		assertEquals(fourth, new FindMax<Integer>(first, second, third, fourth, fifth, sixth).testMaximum());
 	}
-
+	
 	@Test
-	public void givenSecondMaxInt_shouldReturn_second() {
+	public void givenMultipeFloat_shouldReturn_maxFloat() {
 		Integer first = 9;
-		Integer second = 10;
+		Integer second = 51;
 		Integer third = 7;
-		assertEquals(second, new FindMax<Integer>(first, second, third).testMaximum());
+		Integer fourth = 10;
+		assertEquals(second, new FindMax<Integer>(first, second, third, fourth).testMaximum());
 	}
-
+	
 	@Test
-	public void givenThirdMaxInt_shouldReturn_third() {
-		Integer first = 9;
-		Integer second = 5;
-		Integer third = 10;
-		assertEquals(third, new FindMax<Integer>(first, second, third).testMaximum());
-	}
-
-	@Test
-	public void givenFirstMaxFloat_shouldReturn_first() {
+	public void givenMultipleFloat_shouldReturn_MaxFloat() {
 		Float first = 9.5f;
 		Float second = 5.4f;
 		Float third = 7.1f;
-		assertEquals(first, new FindMax<Float>(first, second, third).testMaximum());
+		Float fourth = 10.5f;
+		Float fifth = 12.7f;
+		Float sixth = 20.7f;
+		assertEquals(sixth, new FindMax<Float>(first, second, third, fourth, fifth, sixth).testMaximum());
 	}
-
+	
 	@Test
-	public void givenSecondMaxFloat_shouldReturn_second() {
-		Float first = 9.5f;
-		Float second = 10.4f;
-		Float third = 7.1f;
-		assertEquals(second, new FindMax<Float>(first, second, third).testMaximum());
-	}
-
-	@Test
-	public void givenThirdMaxFloat_shouldReturn_third() {
+	public void givenMultipeInt_shouldReturn_maxInt() {
 		Float first = 9.5f;
 		Float second = 5.4f;
-		Float third = 10.3f;
-		assertEquals(third, new FindMax<Float>(first, second, third).testMaximum());
+		Float third = 7.1f;
+		Float fourth = 10f;
+		assertEquals(fourth, new FindMax<Float>(first, second, third, fourth).testMaximum());
 	}
+	
 
 	@Test
-	public void givenFirstMaxString_shouldReturn_first() {
+	public void givenMultipeString_shouldReturn_maxString() {
 		String first = "peach";
 		String second = "banana";
 		String third = "apple";
-		assertEquals(first, new FindMax<String>(first, second, third).testMaximum());
+		String fourth = "coconut";
+		assertEquals(first, new FindMax<String>(first, second, third, fourth).testMaximum());
 	}
-
+	
 	@Test
-	public void givenSecondMaxString_shouldReturn_second() {
-		String first = "banana";
-		String second = "peach";
+	public void givenMultipeString_shouldReturn_maxstring() {
+		String first = "peach";
+		String second = "banana";
 		String third = "apple";
-		assertEquals(second, new FindMax<String>(first, second, third).testMaximum());
-	}
-
-	@Test
-	public void givenThirdMaxString_shouldReturn_third() {
-		String first = "banana";
-		String second = "apple";
-		String third = "peach";
-		assertEquals(third, new FindMax<String>(first, second, third).testMaximum());
+		String fourth = "coconut";
+		String fifth = "mango";
+		String sixth = "santra";
+		assertEquals(sixth, new FindMax<String>(first, second, third, fourth, fifth, sixth).testMaximum());
 	}
 }
