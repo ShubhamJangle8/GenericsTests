@@ -1,8 +1,23 @@
 package com.generics.genericstest;
 
 public class FindMax {
-	public static void main(String[] args) {
-		System.out.println("Welcome to the Generics Assignment");
+	
+	/**
+	 * @param first
+	 * @param second
+	 * @param third
+	 * @return
+	 */
+	public Integer find(Integer first, Integer second, Integer third) {
+		if (first.compareTo(second) == 1 && first.compareTo(third) == 1) {
+			return first;
+		} 
+		else if (second.compareTo(third) == 1 && second.compareTo(first) == 1) {
+			return second;
+		} 
+		else {
+			return third;
+		}
 	}
 
-}
+} 	
