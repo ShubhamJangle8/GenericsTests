@@ -8,7 +8,7 @@ public class FindMax {
 	 * @param third
 	 * @return
 	 */
-	public Integer find(Integer first, Integer second, Integer third) {
+	public Float find(Float first, Float second, Float third) {
 		if (first.compareTo(second) == 1 && first.compareTo(third) == 1) {
 			return first;
 		} 

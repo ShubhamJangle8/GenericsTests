@@ -15,8 +15,8 @@ class FindMaxTest {
 	 */
 	@Test
 	void test1() {
-		Integer expected = 5;
-		Assert.assertEquals(expected, max.find(5, 2, 3));
+		Float expected = 5.0f;
+		Assert.assertEquals(expected, max.find(5.0f, 2f, 3.0f));
 	}
 
 	/**
@@ -24,8 +24,8 @@ class FindMaxTest {
 	 */
 	@Test
 	void test2() {
-		Integer expected = 4;
-		Assert.assertEquals(expected, max.find(1, 4, 3));
+		Float expected = 4f;
+		Assert.assertEquals(expected, max.find(1f, 4f, 3f));
 	}
 
 	/**
@@ -33,8 +33,8 @@ class FindMaxTest {
 	 */
 	@Test
 	void test3() {
-		Integer expected = 3;
-		Assert.assertEquals(expected, max.find(1, 2, 3));
+		Float expected = 3f;
+		Assert.assertEquals(expected, max.find(1f, 2f, 3f));
 	}
 
 }
